@@ -15,32 +15,32 @@ function populateHero(content) {
   // Populate hero title
   const heroTitle = document.getElementById('hero-title');
   if (heroTitle) {
-    heroTitle.textContent = window.escapeHtml(hero.title);
+    heroTitle.textContent = hero.title;
   }
   
   // Populate hero subtitle
   const heroSubtitle = document.getElementById('hero-subtitle');
   if (heroSubtitle) {
-    heroSubtitle.textContent = window.escapeHtml(hero.subtitle);
+    heroSubtitle.textContent = hero.subtitle;
   }
   
   // Populate hero description
   const heroDescription = document.getElementById('hero-description');
   if (heroDescription) {
-    heroDescription.textContent = window.escapeHtml(hero.description);
+    heroDescription.textContent = hero.description;
   }
   
   // Populate CTAs
   const primaryCTA = document.getElementById('hero-cta-primary');
   if (primaryCTA && hero.cta_primary) {
-    primaryCTA.href = hero.cta_primary.href;
-    primaryCTA.textContent = window.escapeHtml(hero.cta_primary.text);
+    primaryCTA.href = window.escapeHtml(hero.cta_primary.href);
+    primaryCTA.textContent = hero.cta_primary.text;
   }
   
   const secondaryCTA = document.getElementById('hero-cta-secondary');
   if (secondaryCTA && hero.cta_secondary) {
-    secondaryCTA.href = hero.cta_secondary.href;
-    secondaryCTA.textContent = window.escapeHtml(hero.cta_secondary.text);
+    secondaryCTA.href = window.escapeHtml(hero.cta_secondary.href);
+    secondaryCTA.textContent = hero.cta_secondary.text;
   }
   
   console.log('[Security] Hero section populated');
