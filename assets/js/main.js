@@ -182,3 +182,4 @@ if (document.readyState === 'loading') {
 
 // Export utility functions
 window.logSecurityEvent = logSecurityEvent;
+window.initScrollAnimations = initScrollAnimations;
