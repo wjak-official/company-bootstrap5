@@ -1,0 +1,247 @@
+{
+  "site": {
+    "title": "Ifreelance4u - Web Security Architect & Developer",
+    "author": "Ifreelance4u",
+    "email": "info.ifreelance4u@gmail.com",
+    "description": "Professional web security architect and developer specializing in HIPAA, GDPR, PCI-DSS, SOC 2 compliance, penetration testing, and secure development.",
+    "keywords": "web security, security architect, HIPAA compliance, GDPR compliance, PCI-DSS, penetration testing, secure development, DevSecOps, Dubai developer",
+    "location": "Dubai, UAE",
+    "tagline": "Web Security Architect & Developer"
+  },
+  "navigation": [
+    { "name": "Home", "href": "index.html", "active": false },
+    { "name": "About", "href": "about.html", "active": false },
+    { "name": "Services", "href": "services.html", "active": false },
+    { "name": "Portfolio", "href": "portfolio.html", "active": false },
+    { "name": "Contact", "href": "contact.html", "active": false }
+  ],
+  "social": {
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com",
+    "email": "mailto:info.ifreelance4u@gmail.com"
+  },
+  "footer": {
+    "copyright": "© 2026 Ifreelance4u. All rights reserved.",
+    "links": [
+      { "name": "Privacy Policy", "href": "#privacy" },
+      { "name": "Terms of Service", "href": "#terms" }
+    ]
+  },
+  "home": {
+    "hero": {
+      "title": "Securing Your Digital Future",
+      "subtitle": "Expert Web Security Architecture & Development with Compliance Excellence",
+      "description": "Specialized in HIPAA, GDPR, PCI-DSS, and SOC 2 compliance. Building secure, scalable web solutions with cutting-edge security practices.",
+      "cta_primary": { "text": "View Services", "href": "services.html" },
+      "cta_secondary": { "text": "Contact Me", "href": "contact.html" }
+    },
+    "expertise": [
+      {
+        "icon": "shield-check",
+        "title": "Security Architecture",
+        "description": "Comprehensive security framework design following OWASP Top 10 and industry best practices."
+      },
+      {
+        "icon": "file-earmark-check",
+        "title": "Compliance Expert",
+        "description": "HIPAA, GDPR, PCI-DSS, and SOC 2 compliance implementation and auditing."
+      },
+      {
+        "icon": "code-slash",
+        "title": "Secure Development",
+        "description": "Full-stack development with security-first approach and DevSecOps integration."
+      }
+    ],
+    "stats": [
+      { "number": "50+", "label": "Projects Completed", "icon": "check-circle" },
+      { "number": "15+", "label": "Years Experience", "icon": "award" },
+      { "number": "100%", "label": "Security Focus", "icon": "shield-check" },
+      { "number": "24/7", "label": "Support Available", "icon": "clock" }
+    ]
+  },
+  "about": {
+    "introduction": {
+      "title": "About Me",
+      "subtitle": "Web Security Architect & Developer",
+      "content": "With over 15 years of experience in web security and development, I specialize in creating secure, compliant, and scalable solutions for businesses across healthcare, finance, and e-commerce sectors. My expertise spans from penetration testing to full-stack development, always with security at the forefront."
+    },
+    "journey": {
+      "title": "My Journey",
+      "content": "Started as a web developer, evolved into a security specialist after witnessing the critical importance of security in modern applications. Obtained multiple security certifications and worked with Fortune 500 companies to secure their digital assets."
+    },
+    "drive": {
+      "title": "What Drives Me",
+      "content": "The ever-evolving landscape of cybersecurity threats motivates me to stay ahead of the curve. I'm passionate about building systems that not only function beautifully but are also fortified against emerging threats."
+    },
+    "expertise": [
+      "Security Architecture & Design",
+      "OWASP Top 10 & Security Best Practices",
+      "Compliance Implementation (HIPAA, GDPR, PCI-DSS, SOC 2)",
+      "Penetration Testing & Vulnerability Assessment",
+      "Secure Code Review & Static Analysis",
+      "DevSecOps & CI/CD Security Integration",
+      "Full-Stack Development (Node.js, React, Python, PHP)",
+      "API Security & Authentication Mechanisms"
+    ],
+    "sal_framework": [
+      {
+        "phase": "1. Assess",
+        "title": "Security Assessment",
+        "description": "Comprehensive analysis of current security posture, identifying vulnerabilities and compliance gaps."
+      },
+      {
+        "phase": "2. Design",
+        "title": "Architecture Design",
+        "description": "Create secure architecture blueprint following industry standards and compliance requirements."
+      },
+      {
+        "phase": "3. Implement",
+        "title": "Secure Implementation",
+        "description": "Deploy security controls, integrate security tools, and implement secure coding practices."
+      },
+      {
+        "phase": "4. Test",
+        "title": "Security Testing",
+        "description": "Conduct penetration testing, code reviews, and vulnerability assessments."
+      },
+      {
+        "phase": "5. Monitor",
+        "title": "Continuous Monitoring",
+        "description": "Implement security monitoring, logging, and incident response procedures."
+      },
+      {
+        "phase": "6. Maintain",
+        "title": "Security Maintenance",
+        "description": "Regular updates, patch management, and ongoing security improvements."
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": "security-architecture",
+      "title": "Security Architecture Consulting",
+      "icon": "shield-shaded",
+      "description": "Comprehensive security architecture design and implementation for your applications and infrastructure.",
+      "features": [
+        "Threat modeling and risk assessment",
+        "Security framework design (Zero Trust, Defense in Depth)",
+        "Cloud security architecture (AWS, Azure, GCP)",
+        "Network security design and implementation",
+        "Identity and access management (IAM) strategy"
+      ],
+      "pricing": "Starting at $5,000",
+      "image": "security-architecture.jpg"
+    },
+    {
+      "id": "compliance",
+      "title": "Compliance Implementation",
+      "icon": "file-earmark-check",
+      "description": "End-to-end compliance implementation and audit preparation for GDPR, HIPAA, PCI-DSS, and SOC 2.",
+      "features": [
+        "Gap analysis and compliance roadmap",
+        "Policy and procedure documentation",
+        "Technical controls implementation",
+        "Staff training and awareness programs",
+        "Audit preparation and support"
+      ],
+      "pricing": "Starting at $8,000",
+      "image": "compliance.jpg"
+    },
+    {
+      "id": "web-development",
+      "title": "Custom Web Development",
+      "icon": "code-slash",
+      "description": "Secure, scalable, and performant web applications built with modern technologies and security best practices.",
+      "features": [
+        "Full-stack development (MERN, LAMP, Django)",
+        "RESTful API design and implementation",
+        "Database design and optimization",
+        "Progressive Web Apps (PWA)",
+        "Responsive and accessible UI/UX"
+      ],
+      "pricing": "Starting at $3,000",
+      "image": "web-development.jpg"
+    },
+    {
+      "id": "security-testing",
+      "title": "Security Testing & Code Review",
+      "icon": "bug",
+      "description": "Comprehensive security testing including penetration testing, vulnerability assessment, and secure code review.",
+      "features": [
+        "Web application penetration testing",
+        "API security testing",
+        "Static and dynamic code analysis",
+        "Vulnerability scanning and remediation",
+        "Security audit reports and recommendations"
+      ],
+      "pricing": "Starting at $2,500",
+      "image": "security-testing.jpg"
+    },
+    {
+      "id": "devsecops",
+      "title": "DevSecOps Integration",
+      "icon": "gear",
+      "description": "Integrate security into your development pipeline with automated testing and continuous security monitoring.",
+      "features": [
+        "CI/CD security pipeline setup",
+        "Automated security testing (SAST, DAST, SCA)",
+        "Container security (Docker, Kubernetes)",
+        "Infrastructure as Code (IaC) security",
+        "Security metrics and dashboards"
+      ],
+      "pricing": "Starting at $4,000",
+      "image": "devsecops.jpg"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "Healthcare Portal Security Audit",
+      "category": "security",
+      "description": "Comprehensive security audit and HIPAA compliance implementation for a major healthcare provider.",
+      "image": "project-1.jpg",
+      "tags": ["HIPAA", "Penetration Testing", "Compliance"]
+    },
+    {
+      "id": 2,
+      "title": "E-commerce PCI-DSS Compliance",
+      "category": "compliance",
+      "description": "PCI-DSS Level 1 compliance implementation for high-volume e-commerce platform.",
+      "image": "project-2.jpg",
+      "tags": ["PCI-DSS", "E-commerce", "Payment Security"]
+    },
+    {
+      "id": 3,
+      "title": "Banking Application Development",
+      "category": "development",
+      "description": "Secure online banking platform with multi-factor authentication and fraud detection.",
+      "image": "project-3.jpg",
+      "tags": ["FinTech", "Secure Development", "React"]
+    },
+    {
+      "id": 4,
+      "title": "API Security Framework",
+      "category": "security",
+      "description": "Enterprise API security framework with OAuth 2.0, rate limiting, and threat protection.",
+      "image": "project-4.jpg",
+      "tags": ["API Security", "OAuth", "Microservices"]
+    },
+    {
+      "id": 5,
+      "title": "GDPR Compliance Suite",
+      "category": "compliance",
+      "description": "Complete GDPR compliance solution with data mapping, consent management, and privacy controls.",
+      "image": "project-5.jpg",
+      "tags": ["GDPR", "Privacy", "Data Protection"]
+    },
+    {
+      "id": 6,
+      "title": "DevSecOps Pipeline",
+      "category": "development",
+      "description": "Automated security testing pipeline with SAST, DAST, and container scanning.",
+      "image": "project-6.jpg",
+      "tags": ["DevSecOps", "CI/CD", "Automation"]
+    }
+  ]
+}
