@@ -257,7 +257,7 @@ function populateFooter() {
     socialLinks.forEach(social => {
       if (social.url) {
         const a = document.createElement('a');
-        a.href = escapeHtml(social.url);
+        a.href = social.url;
         a.className = 'social-link';
         a.setAttribute('aria-label', social.name);
         a.setAttribute('rel', 'noopener noreferrer');
