@@ -33,13 +33,13 @@ function populateHero(content) {
   // Populate CTAs
   const primaryCTA = document.getElementById('hero-cta-primary');
   if (primaryCTA && hero.cta_primary) {
-    primaryCTA.href = window.escapeHtml(hero.cta_primary.href);
+    primaryCTA.href = hero.cta_primary.href;
     primaryCTA.textContent = window.escapeHtml(hero.cta_primary.text);
   }
   
   const secondaryCTA = document.getElementById('hero-cta-secondary');
   if (secondaryCTA && hero.cta_secondary) {
-    secondaryCTA.href = window.escapeHtml(hero.cta_secondary.href);
+    secondaryCTA.href = hero.cta_secondary.href;
     secondaryCTA.textContent = window.escapeHtml(hero.cta_secondary.text);
   }
   
