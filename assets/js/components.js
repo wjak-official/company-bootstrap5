@@ -231,7 +231,7 @@ function populateFooter() {
       li.className = 'list-inline-item';
       
       const a = document.createElement('a');
-      a.href = escapeHtml(link.href);
+      a.href = link.href;
       a.textContent = escapeHtml(link.name);
       
       li.appendChild(a);
