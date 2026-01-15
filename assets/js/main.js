@@ -120,6 +120,13 @@ function validateExternalLinks() {
     try {
       const linkUrl = new URL(href);
       
+      // Only allow http and https protocols
+      if (linkUrl.protocol !== 'http:' && linkUrl.protocol !== 'https:') {
+        console.warn('[Security] Invalid protocol detected:', linkUrl.protocol);
+        link.removeAttribute('href');
+        return;
+      }
+      
       // If external domain, ensure security attributes
       if (linkUrl.hostname !== currentDomain) {
         if (!link.hasAttribute('rel')) {
@@ -130,7 +137,7 @@ function validateExternalLinks() {
             link.setAttribute('rel', rel + ' noopener');
           }
           if (!rel.includes('noreferrer')) {
-            link.setAttribute('rel', rel + ' noreferrer');
+            link.setAttribute('rel', link.getAttribute('rel') + ' noreferrer');
           }
         }
         
@@ -140,6 +147,7 @@ function validateExternalLinks() {
       }
     } catch (error) {
       console.warn('[Security] Invalid URL:', href);
+      link.removeAttribute('href');
     }
   });
   

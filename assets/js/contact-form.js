@@ -97,11 +97,13 @@ function validateField(field) {
 function sanitizeInput(input) {
   let value = input.value;
   
-  // Remove potential XSS patterns
-  value = value.replace(/<script[^>]*>.*?<\/script>/gi, '');
-  value = value.replace(/<iframe[^>]*>.*?<\/iframe>/gi, '');
-  value = value.replace(/javascript:/gi, '');
-  value = value.replace(/on\w+\s*=/gi, '');
+  // Remove potential XSS patterns (handles variations with spaces)
+  value = value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script\s*>/gi, '');
+  value = value.replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe\s*>/gi, '');
+  value = value.replace(/javascript\s*:/gi, 'blocked:');
+  value = value.replace(/data\s*:/gi, 'blocked:');
+  value = value.replace(/vbscript\s*:/gi, 'blocked:');
+  value = value.replace(/\s*on\w+\s*=/gi, '');
   
   input.value = value;
 }

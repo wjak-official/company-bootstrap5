@@ -28,18 +28,18 @@ function escapeHtml(text) {
 function sanitizeHtml(html) {
   if (typeof html !== 'string') return '';
   
-  // Remove script tags and their content
-  html = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  // Remove script tags and their content (handles variations with spaces)
+  html = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script\s*>/gi, '');
   
   // Remove event handlers (onclick, onerror, etc.)
-  html = html.replace(/on\w+\s*=\s*["'][^"']*["']/gi, '');
-  html = html.replace(/on\w+\s*=\s*[^\s>]*/gi, '');
+  // More comprehensive pattern to catch variations
+  html = html.replace(/\s*on\w+\s*=\s*["'][^"']*["']/gi, '');
+  html = html.replace(/\s*on\w+\s*=\s*[^\s>]*/gi, '');
   
-  // Remove javascript: protocol
-  html = html.replace(/javascript:/gi, '');
-  
-  // Remove data: protocol (except for images)
-  html = html.replace(/(<(?!img)[^>]+)data:/gi, '$1');
+  // Remove javascript:, data:, and vbscript: protocols
+  html = html.replace(/javascript\s*:/gi, 'blocked:');
+  html = html.replace(/data\s*:/gi, 'blocked:');
+  html = html.replace(/vbscript\s*:/gi, 'blocked:');
   
   return html;
 }
