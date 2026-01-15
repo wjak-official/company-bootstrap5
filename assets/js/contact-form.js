@@ -287,6 +287,20 @@ function simulateAPICall(data) {
 }
 
 /**
+ * Initialize character counter
+ */
+function initCharacterCounter() {
+  const messageField = document.getElementById('message');
+  const charCount = document.getElementById('char-count');
+  
+  if (messageField && charCount) {
+    messageField.addEventListener('input', function() {
+      charCount.textContent = this.value.length;
+    });
+  }
+}
+
+/**
  * Initialize contact form
  */
 function initContactForm() {
@@ -297,6 +311,9 @@ function initContactForm() {
   
   // Initialize CSRF token
   initCSRFToken();
+  
+  // Initialize character counter
+  initCharacterCounter();
   
   // Add validation on blur
   const nameField = form.querySelector('[name="name"]');
