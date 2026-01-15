@@ -192,7 +192,7 @@ function populateNavigation() {
     
     const a = document.createElement('a');
     a.className = 'nav-link';
-    a.href = escapeHtml(item.href);
+    a.href = item.href;
     a.textContent = escapeHtml(item.name);
     
     // Set active state
