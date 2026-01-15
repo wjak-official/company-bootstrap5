@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Security Meta Tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Get in touch to discuss your security needs and project requirements. Located in Dubai, UAE.">
+  <meta name="keywords" content="contact, security consultation, Dubai, web security, hire security architect">
+  <meta name="author" content="Ifreelance4u">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Contact - Ifreelance4u">
+  <meta property="og:description" content="Get in touch to discuss your security needs.">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact - Ifreelance4u">
+  
+  <title>Contact - Ifreelance4u</title>
+  
+  <!-- Bootstrap CSS with SRI -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+        crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" 
+        crossorigin="anonymous">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
+  
+  <!-- Page Header -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="text-center">
+        <h1>Contact Me</h1>
+        <p class="lead">Let's Discuss Your Security Needs</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section>
+    <div class="container">
+      <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="contact-form">
+            <h2 class="mb-4">Send a Message</h2>
+            
+            <!-- Form Message Alert -->
+            <div id="form-message" style="display: none;"></div>
+            
+            <form id="contact-form" novalidate>
+              <!-- CSRF Token (Hidden) -->
+              <input type="hidden" name="csrf_token" id="csrf_token">
+              
+              <!-- Honeypot Field (Hidden) -->
+              <div class="honeypot">
+                <label for="website">Website (leave blank)</label>
+                <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+              </div>
+              
+              <!-- Name Field -->
+              <div class="mb-3">
+                <label for="name" class="form-label">
+                  Name <span class="text-danger">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="name" 
+                  name="name" 
+                  required 
+                  minlength="2" 
+                  maxlength="100"
+                  aria-describedby="nameHelp"
+                  placeholder="Your full name">
+                <div class="invalid-feedback">
+                  Please enter a valid name (2-100 characters, letters only).
+                </div>
+              </div>
+              
+              <!-- Email Field -->
+              <div class="mb-3">
+                <label for="email" class="form-label">
+                  Email <span class="text-danger">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  class="form-control" 
+                  id="email" 
+                  name="email" 
+                  required
+                  aria-describedby="emailHelp"
+                  placeholder="your.email@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              
+              <!-- Message Field -->
+              <div class="mb-3">
+                <label for="message" class="form-label">
+                  Message <span class="text-danger">*</span>
+                </label>
+                <textarea 
+                  class="form-control" 
+                  id="message" 
+                  name="message" 
+                  rows="6" 
+                  required 
+                  minlength="10" 
+                  maxlength="2000"
+                  aria-describedby="messageHelp"
+                  placeholder="Tell me about your project or security needs..."></textarea>
+                <div class="invalid-feedback">
+                  Please enter a message (10-2000 characters).
+                </div>
+                <small class="form-text text-muted">
+                  <span id="char-count">0</span> / 2000 characters
+                </small>
+              </div>
+              
+              <!-- Privacy Policy Checkbox -->
+              <div class="mb-3">
+                <div class="form-check">
+                  <input 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    id="privacy" 
+                    name="privacy" 
+                    required>
+                  <label class="form-check-label" for="privacy">
+                    I agree to the <a href="#privacy">Privacy Policy</a> and understand my data will be processed securely. <span class="text-danger">*</span>
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree to the privacy policy.
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="bi bi-send me-2"></i>Send Message
+              </button>
+              
+              <p class="text-muted mt-3 small">
+                <i class="bi bi-shield-check me-1"></i>
+                This form is protected with CSRF tokens and rate limiting for security.
+              </p>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Contact Information Sidebar -->
+        <div class="col-lg-4">
+          <div class="contact-info-card">
+            <h3 class="mb-4">Contact Information</h3>
+            
+            <!-- Email -->
+            <div class="contact-info-item">
+              <i class="bi bi-envelope contact-info-icon"></i>
+              <div class="contact-info-content">
+                <h5>Email</h5>
+                <p><a href="mailto:info.ifreelance4u@gmail.com">info.ifreelance4u@gmail.com</a></p>
+              </div>
+            </div>
+            
+            <!-- Location -->
+            <div class="contact-info-item">
+              <i class="bi bi-geo-alt contact-info-icon"></i>
+              <div class="contact-info-content">
+                <h5>Location</h5>
+                <p>Dubai, UAE</p>
+              </div>
+            </div>
+            
+            <!-- Availability -->
+            <div class="contact-info-item">
+              <i class="bi bi-clock contact-info-icon"></i>
+              <div class="contact-info-content">
+                <h5>Availability</h5>
+                <p>Available for projects<br>Response within 24-48 hours</p>
+              </div>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="contact-info-item">
+              <i class="bi bi-share contact-info-icon"></i>
+              <div class="contact-info-content">
+                <h5>Connect</h5>
+                <div class="social-links mt-2">
+                  <a href="https://github.com" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="https://linkedin.com" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                  <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                  <a href="mailto:info.ifreelance4u@gmail.com" class="social-link" aria-label="Email">
+                    <i class="bi bi-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+  
+  <!-- Bootstrap JS with SRI -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+          crossorigin="anonymous"></script>
+  
+  <!-- Custom JavaScript Modules -->
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/contact-form.js"></script>
+  
+  <!-- Character Counter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const messageField = document.getElementById('message');
+      const charCount = document.getElementById('char-count');
+      
+      if (messageField && charCount) {
+        messageField.addEventListener('input', function() {
+          charCount.textContent = this.value.length;
+        });
+      }
+    });
+  </script>
+</body>
+</html>
